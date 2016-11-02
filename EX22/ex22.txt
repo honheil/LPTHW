@@ -1,0 +1,31 @@
+print "" -> to print words on Terminal
+# -> to write comments
++ -> plus
+- -> minus
+/ -> slash (divide)
+* -> asterisk (time)
+% -> percent
+< -> less-than
+> -> greater-than
+<= -> less-than-equal
+>= -> greater-than-equal
+%s -> show script
+%d -> show digit
+%r -> show script/digit, but just use for checking
+"Hi, %r." % xx -> xx will be shown after hi,
+% (xx, yy) -> show two stuff at the same statement
+\n -> enter a new row
+""" -> show the same layout as in .py
+\t -> Tab
+raw_input() -> input new value
+argv -> argument, more variables
+open() -> open a file
+txt.read -> read text file
+close() -> close file
+readline() -> read one line
+truncate() -> empty the file
+write('xxx') -> write xxx in the file
+exists -> true/false statement
+len() -> turn to number
+seek() -> deal with bytes
+return -> return value
