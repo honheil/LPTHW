@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 style="text-align:center; font-family:verdana;">You Died!</h1>
+<p style="text-align:center; font-family:courier;">Looks like you bit the dust.</p>
+<form action="/userdata" method="POST" style="font-family:courier;">
+  Username:<br>
+  <input type="text" name="username">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<p style="text-align:center; font-family:courier;"><a href="/">Play Again?</a></p>
+{% endblock %}

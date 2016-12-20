@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% if scene %}
+  <h1 style="text-align:center; font-family:verdana;"> {{ scene.title }} </h1>
+  <pre style="text-align:center; font-family:courier;">{{ scene.description }}</pre>
+  {% if scene.urlname == "death" %}
+    <p style="text-align:center; font-family:courier;"><a href="/">Play Again?</a></p>
+  {% else %}
+    <p style="text-align:center; font-family:courier;">
+      <form action="/game/1" method="POST" style="font-family:courier;">
+        What do you do? <input type="text" name="userinput"> <input type="SUBMIT">
+      </form>
+    </p>
+    <p style="text-align:center; font-family:courier;">
+      <button type="button" action="/game/1" method="POST" style="font-family:courier;" onclick=display_alert()>
+      Help</button>
+
+    <script>
+    function display_alert()
+      {
+       alert("Brain World: you can choose key / another gate / leave.\nKeypad: I remeber Jenny's birthday is on twenty-somthing in May.\nStorage Room: It is an odd number.\nFinal Room: Shall we save her?\nSave Memories: 50% of chances to be success.\nJunction: 50% of chances to be success");
+      }
+    </script>
+  {% endif %}
+{% else %}
+  <p style="text-align:center; font-family:courier;"><a href="/game/1">Start at the Beginning</a></p>
+{% endif %}
+{% endblock %}
